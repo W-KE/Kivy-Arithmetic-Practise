@@ -1,0 +1,69 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+        Button:
+            id: start_stop
+            text: 'Start'
+            on_press: app.start_stop()
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+        Label:
+            id: time
+            text: '[b]00[/b]:00:[size=40]00[/size]'
+            font_size: 60
+            markup: True
+        Label:
+            id: stopwatch
+            text: '[b]00[/b]:00.[size=40]00[/size]'
+            font_size: 60
+            markup: True
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 20
+        spacing: 20
+        Label:
+            id: question
+            text: '00 x 00 ='
+            font_size: 60
+            markup: True
+        BoxLayout:
+            height: 90
+            orientation: 'vertical'
+            padding: 20
+            spacing: 20
+            TextInput:
+                id: answer
+                text: ''
+                font_size: 60
+                padding: [10, 0]
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+        Label:
+            id: score
+            text: 'Question: 00 Correct: 00 out of 00'
+            font_size: 40
+            markup: True
+    BoxLayout:
+        height: 90
+        orientation: 'horizontal'
+        padding: 20
+        spacing: 20
+        size_hint: (1, None)
+        Button:
+            id: next
+            text: 'Next'
+            on_press: app.next()
